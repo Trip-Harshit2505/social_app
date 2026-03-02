@@ -29,7 +29,6 @@ class User(SQLModel, table=True):
     created_at: datetime = Field(
         sa_column=Column(TIMESTAMP(timezone=True), server_default=text('now()'), nullable=False)
     )
-    role: str = Field(default="user")
 
 class Vote(SQLModel, table=True):
     __tablename__ = "votes"
