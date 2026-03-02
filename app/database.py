@@ -6,7 +6,9 @@ from .config import settings
 
 # POSTGRESQL_URL = "postgres://<username>:<password>@<ip-address/hostname>/<database_name"
 
-DATABASE_URL = f"postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}"
+# DATABASE_URL = f"postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}"
+
+DATABASE_URL = settings.database_url
 
 engine = create_engine(DATABASE_URL)
 
